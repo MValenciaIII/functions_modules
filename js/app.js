@@ -124,16 +124,43 @@ console.log(result);
 
 
 
-function totalChange(pennies,nickels,dimes,quarters) {
+function totalChange(pennies = 0,nickels = 0,dimes = 0,quarters = 0) {
     let penny = .01;
     let nickel = .05;
     let dime = .10;
     let quarter = .25;
+    
+    var change = {
+    penny: pennies,
+    nickel: nickels,
+    dime: dimes,
+    quarter: quarters
+    }
 
-    console.log(pennies*penny + nickels*nickel + dimes*dime + quarters*quarter + "$ is the the total amount of change altogether");
+    console.log(change.penny*penny + change.nickel*nickel + change.dime*dime + change.quarter*quarter + "$ is the the total amount of change altogether");
 }
 
 
 var result3 = totalChange(230,1500,235,83);
 
 
+function totalChangeV2(pennies = 0,nickels = 0,dimes = 0,quarters = 0) {
+    
+}
+
+function coinRolling(pennies = 0,nickels = 0,dimes = 0,quarters = 0) {
+    var coins = {
+        pennies: pennies,
+        nickels: nickels,
+        dimes: dimes,
+        quarters: quarters
+    }
+    let coinWrapper1 = 50;
+    let coinwrapper2 = 40;
+
+    for(let coin in coins) {
+        console.log(coins[coin]);
+    }
+}
+var result4 = coinRolling(200,10,10,10);
+console.log(result4);
